@@ -22,7 +22,7 @@ buttons.forEach(button => {
 // An empty array called items stores my shopping list items, keeping track of all items needed to be bought.
 let items = [];
 
-// Getting elements to use within JavaScript
+// Getting some priority elements to use within JavaScript
 const itemInput = document.getElementById('item-input');
 const shoppingList = document.getElementById('shopping-list');
 const itemsList = document.getElementById('items');
@@ -41,6 +41,8 @@ function addItem() {
 // On click add button handle the event, calling add item function.
 addButton.addEventListener('click', addItem);
 
+
+
 // Delete the items array, make the list of an array empty and update the displayed list.
 const clearButton = document.getElementById('clear-button');
 function clearList() {
@@ -48,7 +50,7 @@ function clearList() {
     refreshList();
 }
 
-// By clicking the clear list button calls clearList() function
+// By clicking the clear list button calls clearList() function,clear button event listener
 clearButton.addEventListener('click', clearList);
 
 // Get marked-purchased elements
@@ -57,7 +59,7 @@ const markPurchasedButton = document.getElementById('Mark-Purchased');
 // To clear the current list on browser, check the purchased property of each item and add the purchased class to the list item (<li>) when needed, show name of each item on the list, mark items on list by clicking on them and add them to webpage
 function refreshList() {
     shoppingList.innerHTML = '';
-    itemsList.innerHTML = ''; // Clear the existing options in the datalist
+    itemsList.innerHTML = ''; // to clear the existing options in the datalist
     items.forEach((item, index) => {
         const li = document.createElement('li');
         li.textContent = item.name;

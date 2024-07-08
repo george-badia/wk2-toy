@@ -1,0 +1,107 @@
+
+
+
+/* -----------------------body--------------- */
+
+body {
+   font-family: Arial, sans-serif;
+   background-image: url(asset/background.jpg);
+   margin: 0;
+   padding: 0;
+   background-size: cover;
+}
+
+
+ /*--------- my shopping list container---------------------- */
+.container {
+   max-width: 600px;
+   margin: 0 auto;
+   padding: 20px;
+   background-color: white;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+ 
+
+/*----  section for enter items--------------- */
+
+.input-section {
+display: flex;
+margin-bottom: 20px;
+}
+
+#item-input {
+flex-grow: 1;
+padding: 10px;
+font-size: 16px;
+border: 1px solid #dddd ;
+}
+
+
+
+
+/* ------------------styling the shoppinglist(rmbr to add more style in jS  ----------*/
+ul {
+   list-style-type: none;
+   padding: 0;
+}
+
+li {
+   padding: 10px;
+   background-color: #f9f9f9;
+   margin-bottom: 5px;
+   cursor: pointer;
+}
+
+li.purchased {
+   text-decoration: line-through;
+   color: #888;
+}
+
+
+
+
+/* ---------------------styling all the buttons(more styles to be added in js)------------ */
+
+/* the clear button */
+.button-section {
+   text-align: center;
+   margin-top: 20px;
+   display: flex;
+   justify-content: center;
+}
+
+#clear-button {
+   background-color: red;
+}
+
+#clear-button:hover {
+   background-color: Crimson;
+}
+
+
+/*add button */
+button {
+   padding: 10px 20px;
+   font-size: 16px;
+   background-color: green;
+   color: white;
+   border: none;
+   cursor: pointer;
+}
+
+button:hover {
+   background-color: #45a049;
+}
+
+
+ /*Mark-Purchase button*/
+#Mark-Purchased{
+   background-color: blue;
+}
+
+#Mark-Purchased:hover{
+   background-color: #2466ad;
+} 
+
+ 

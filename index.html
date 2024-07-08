@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Better Buys | Shopping List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <!------------------- list container section  --------------------->
+    <div class="container">
+        <h1 id="title">Better Buys Shopping<br><span id="shopping-list-title"> List</span></h1>
+      
+        <div class="input-section">
+            <input type="text" id="item-input" list="items" placeholder="Enter an item">
+            <datalist id="items"></datalist>
+            <button id="add-button">Add</button>
+        </div>
+        
+        <!------------ shopping list section ------------------>
+        <div class="list-section">
+            <ul id="shopping-list"></ul>
+        </div>
+
+        <!---------------- clear and Mark Purchase buttons section ------------->
+        <div class="button-section">
+            <button id="clear-button">Clear List</button>
+        </div>
+        <div class="button-section">
+            <button id="Mark-Purchased">Mark Purchased</button>
+        </div>
+    </div>
+
+    <!------------ footer area ---------------->
+    <footer id="footer">
+        &#169 Jojo Badia Contact: 070321496
+    </footer>
+
+    <script src="javaScript.js"></script>
+</body>
+</html>

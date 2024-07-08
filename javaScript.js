@@ -1,6 +1,6 @@
 document.getElementsByTagName("h1")[0].style.fontSize = "4vw";
 
-// Styling the title to center it and make "Shopping List" appear below "Better Buys"
+// Styling the title to center it and make "Shopping List" appear below "Better Buys".
 const title = document.getElementById('title');
 title.style.textAlign = 'center';
 

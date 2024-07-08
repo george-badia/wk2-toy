@@ -1,7 +1,7 @@
 //adding h1 style and font size
 document.getElementsByTagName("h1")[0].style.fontSize = "4vw";
 
-// Styling the title to center it and make  the word "List" appear below "Better Buys"
+// Styling the title to center it and make  the word "List" appear below "Better Buys shopping"
 const title = document.getElementById('title');
 title.style.textAlign = 'center';
 

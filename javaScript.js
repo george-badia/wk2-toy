@@ -1,7 +1,6 @@
-//adding h1 style and font size
 document.getElementsByTagName("h1")[0].style.fontSize = "4vw";
 
-// Styling the title to center it and make  the word "List" appear below "Better Buys shopping"
+// Styling the title to center it and make "Shopping List" appear below "Better Buys"
 const title = document.getElementById('title');
 title.style.textAlign = 'center';
 
@@ -9,7 +8,7 @@ const shoppingListTitle = document.getElementById('shopping-list-title');
 shoppingListTitle.style.display = 'block';
 shoppingListTitle.style.marginTop = '10px';
 
-// Adding styles to the buttons giving them a border properties
+// Adding styles to the buttons
 const buttons = document.querySelectorAll('button');
 buttons.forEach(button => {
     button.style.borderRadius = '10px';  
@@ -22,7 +21,7 @@ buttons.forEach(button => {
 // An empty array called items stores my shopping list items, keeping track of all items needed to be bought.
 let items = [];
 
-// Getting some priority elements to use within JavaScript
+// Getting elements to use within JavaScript
 const itemInput = document.getElementById('item-input');
 const shoppingList = document.getElementById('shopping-list');
 const itemsList = document.getElementById('items');
@@ -41,8 +40,6 @@ function addItem() {
 // On click add button handle the event, calling add item function.
 addButton.addEventListener('click', addItem);
 
-
-
 // Delete the items array, make the list of an array empty and update the displayed list.
 const clearButton = document.getElementById('clear-button');
 function clearList() {
@@ -50,7 +47,7 @@ function clearList() {
     refreshList();
 }
 
-// By clicking the clear list button calls clearList() function,clear button event listener
+// By clicking the clear list button calls clearList() function
 clearButton.addEventListener('click', clearList);
 
 // Get marked-purchased elements
@@ -63,13 +60,32 @@ function refreshList() {
     items.forEach((item, index) => {
         const li = document.createElement('li');
         li.textContent = item.name;
+        li.style.display = 'flex';          
+        li.style.justifyContent = 'space-between';  
+        li.style.alignItems = 'center';     
+        li.style.padding = '5px';           
+        li.style.borderBottom = '1px solid blue';  
+
         if (item.purchased) {
             li.classList.add('purchased');
         }
-        li.onclick = () => strikePurchased(index);
+
+        // Adding the "Mark Purchased" button next to each item to individualy mark an item bought
+        const markButton = document.createElement('button');
+        markButton.textContent = 'Mark Purchased';
+        markButton.style.borderRadius = '10px';
+        markButton.style.padding = '5px';
+        markButton.style.marginLeft = '10px';
+        markButton.style.backgroundColor = 'blue';
+        markButton.style.color = 'white';
+        markButton.style.border = 'none';
+        markButton.style.cursor = 'pointer';
+        markButton.onclick = () => strikePurchased(index);
+
+        li.appendChild(markButton);
         shoppingList.appendChild(li);
 
-        // Add the item to the datalist
+        // Adding the marked item to the datalist
         const option = document.createElement('option');
         option.value = item.name;
         itemsList.appendChild(option);

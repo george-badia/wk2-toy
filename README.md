@@ -1,6 +1,6 @@
 # week2-code-challenge
 
-# Speed Checker, July 2024
+# Better Buys Shopping List, July 2024
 
 This is a simple shopping list webpage designed to help users organize their shopping items efficiently. Users can easily add items to the list, mark items as purchased, and clear the list when needed.
 
